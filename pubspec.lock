@@ -49,6 +49,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
+  cloud_firestore:
+    dependency: "direct main"
+    description:
+      name: cloud_firestore
+      sha256: "019da47850fe2c86266a4b86e82e0d00dcb5bf0718f26fc70bf9df275ee16537"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.11.0"
+  cloud_firestore_platform_interface:
+    dependency: transitive
+    description:
+      name: cloud_firestore_platform_interface
+      sha256: "7e08cd322ff98ddfdb6ab8a89b24f895c473992d674bfd3b36865037879baa3f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.1"
+  cloud_firestore_web:
+    dependency: transitive
+    description:
+      name: cloud_firestore_web
+      sha256: bd2183128b67d66a6e672c50e47bc70393418f3bd669aad8ac321e88f027b2b5
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.8.1"
   collection:
     dependency: transitive
     description:
@@ -248,6 +272,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.5"
+  qr:
+    dependency: transitive
+    description:
+      name: qr
+      sha256: "64957a3930367bf97cc211a5af99551d630f2f4625e38af10edd6b19131b64b3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
+  qr_flutter:
+    dependency: "direct main"
+    description:
+      name: qr_flutter
+      sha256: "5095f0fc6e3f71d08adef8feccc8cea4f12eec18a2e31c2e8d82cb6019f4b097"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.0"
   sky_engine:
     dependency: transitive
     description: flutter

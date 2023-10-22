@@ -5,6 +5,7 @@ abstract class Routes {
   static const settings = 'settings';
   static const products = 'products';
   static const detailProduct = 'detailProduct';
+  static const addProduct = 'addProduct';
   static const error = 'error';
   static const login = 'login';
 }

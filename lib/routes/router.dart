@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
+import 'package:qrcode_bloc/page/add_products.dart';
 import 'package:qrcode_bloc/page/detail_products.dart';
 import 'package:qrcode_bloc/page/error.dart';
 import 'package:qrcode_bloc/page/login.dart';
 import 'package:qrcode_bloc/page/products.dart';
-import 'package:qrcode_bloc/page/settings.dart';
 import '../page/home.dart';
 export 'package:go_router/go_router.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -33,18 +33,19 @@ final router = GoRouter(
               builder: (context, state) => const ProductsPage(),
               routes: [
                 GoRoute(
-                    path: ':id',
-                    name: Routes.detailProduct,
-                    builder: (context, state) => DetailProducts(
-                        state.pathParameters['id'].toString(),
-                        state.uri.queryParameters)),
-              ])
+                  path: ':id',
+                  name: Routes.detailProduct,
+                  builder: (context, state) => DetailProducts(
+                      state.pathParameters['id'].toString(),
+                      state.uri.queryParameters),
+                )
+              ]),
+              GoRoute(
+                  path: 'add-product',
+                  name: Routes.addProduct,
+                  builder: (context, state) => AddProducts(),
+                )
         ]),
-    GoRoute(
-      path: '/settings',
-      name: Routes.settings,
-      builder: (context, state) => const SettingsPage(),
-    ),
     GoRoute(
       path: '/login',
       name: Routes.login,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qrcode_bloc/bloc/auth/auth_bloc.dart';
+import '../bloc/bloc.dart';
 import 'package:qrcode_bloc/routes/router.dart';
 
 class LoginPage extends StatelessWidget {
