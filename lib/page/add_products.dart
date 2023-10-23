@@ -83,7 +83,7 @@ class AddProducts extends StatelessWidget {
                 }
               },
               builder: (context, state) {
-                return Text(state is ProductStateLoading
+                return Text(state is ProductStateLoadingAdd
                     ? "LOADING..."
                     : "Tambah Produk");
               },

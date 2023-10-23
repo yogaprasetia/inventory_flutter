@@ -71,6 +71,7 @@ class DetailProducts extends StatelessWidget {
           TextField(
             autocorrect: false,
             controller: qtyC,
+            keyboardType: TextInputType.number,
             decoration: InputDecoration(
                 labelText: "Jumlah Produk",
                 border: OutlineInputBorder(
@@ -99,7 +100,7 @@ class DetailProducts extends StatelessWidget {
                 }
               },
               builder: (context, state) {
-                return Text(state is ProductStateLoading
+                return Text(state is ProductStateLoadingEdit
                     ? "LOADING..."
                     : "Update Produk");
               },
@@ -121,8 +122,7 @@ class DetailProducts extends StatelessWidget {
                 }
               },
                 builder: (context, state) {
-                  return Text(
-                  "Hapus Produk",
+                  return Text(state is ProductStateLoadingDelete ? "Loading..." : "Hapus Produk",
                     style: TextStyle(color: Colors.red.shade900),
                   );
                 },
