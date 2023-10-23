@@ -4,6 +4,8 @@ import 'package:qrcode_bloc/bloc/bloc.dart';
 import 'package:qrcode_bloc/models/product.dart';
 import 'package:qrcode_bloc/routes/router.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:barcode/barcode.dart';
+import 'package:syncfusion_flutter_barcodes/barcodes.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({super.key});
@@ -66,10 +68,8 @@ class ProductsPage extends StatelessWidget {
                       Routes.detailProduct,
                       pathParameters: {
                         "id" : product.productId!,
-
                       },
                       extra: product,
-
                       );
                   },
                   child: Container(
@@ -93,12 +93,10 @@ class ProductsPage extends StatelessWidget {
                         ),
                         Container(
                           height: 50,
-                          width: 50,
-                          child: QrImageView(
-                            data: product.code!,
-                            size: 200.0,
-                            version: QrVersions.auto,
-                            ),
+                          width: 100,
+                          child: SfBarcodeGenerator(value: product.code!,
+                          showValue: true,
+                          ),
                         )
                       ],
                     ),

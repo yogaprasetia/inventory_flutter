@@ -3,6 +3,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import 'package:qrcode_bloc/bloc/bloc.dart';
 import 'package:qrcode_bloc/models/product.dart';
 import 'package:qrcode_bloc/routes/router.dart';
+import 'package:syncfusion_flutter_barcodes/barcodes.dart';
 
 class DetailProducts extends StatelessWidget {
   DetailProducts(this.id, this.product, {super.key});
@@ -29,13 +30,12 @@ class DetailProducts extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 200,
+                height: 100,
                 width: 200,
-                child: QrImageView(
-                  data: product.code!,
-                  size: 200,
-                  version: QrVersions.auto,
-                ),
+                child: SfBarcodeGenerator(
+                  value: product.code!,
+                  showValue: true,
+                )
               ),
             ],
           ),

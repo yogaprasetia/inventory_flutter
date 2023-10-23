@@ -26,7 +26,7 @@ packages:
     source: hosted
     version: "2.11.0"
   barcode:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: barcode
       sha256: "789f898eef0bd88312470bdb2cc996f895ad7dd5f89e9adde84b204546a90b45"
@@ -304,14 +304,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
-  open_file:
+  open_filex:
     dependency: "direct main"
     description:
-      name: open_file
-      sha256: a5a32d44acb7c899987d0999e1e3cbb0a0f1adebbf41ac813ec6d2d8faa0af20
+      name: open_filex
+      sha256: a6c95237767c5647e68b71a476602fcf4f1bfc530c126265e53addae22ef5fc2
       url: "https://pub.dev"
     source: hosted
-    version: "3.3.2"
+    version: "4.3.4"
   path:
     dependency: transitive
     description:
@@ -477,6 +477,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
+  syncfusion_flutter_barcodes:
+    dependency: "direct main"
+    description:
+      name: syncfusion_flutter_barcodes
+      sha256: "7c715f77597e7b2fb00b586a4695d04a64d84dbe42b28054e8b5a0ef4c72d89c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "23.1.41"
+  syncfusion_flutter_core:
+    dependency: transitive
+    description:
+      name: syncfusion_flutter_core
+      sha256: a8e3d3ea369566bb45f454331c5863939632b6068d15b558fa384811f1f5aa51
+      url: "https://pub.dev"
+    source: hosted
+    version: "23.1.41"
   term_glyph:
     dependency: transitive
     description:
