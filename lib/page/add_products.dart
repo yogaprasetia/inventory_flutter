@@ -78,7 +78,7 @@ class AddProducts extends StatelessWidget {
                   ScaffoldMessenger.of(context)
                       .showSnackBar(SnackBar(content: Text(state.message)));
                 }
-                if (state is ProductStateComplete) {
+                if (state is ProductStateCompleteAdd) {
                   context.pop();
                 }
               },

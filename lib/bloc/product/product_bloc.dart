@@ -32,18 +32,43 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
           "productId": hasil.id,
         });
 
-        emit(ProductStateComplete());
+        emit(ProductStateCompleteAdd());
       } on FirebaseException catch (e) {
         emit(ProductStateError(e.message ?? "Tidak Dapat Menambah Produk"));
       } catch (e) {
         emit(ProductStateError("Tidak Dapat Menambah Product"));
       }
     });
-    on<ProductEventEditProduct>((event, emit) {
-      // TODO: implement event handler
+    on<ProductEventEditProduct>((event, emit) async {
+      try {
+        emit(ProductStateLoading());
+
+        await firestore
+            .collection("products")
+            .doc(event.productId)
+            .update({"name": event.name,"qty": event.qty});
+
+        emit(ProductStateCompleteEdit());
+      } on FirebaseException catch (e) {
+        emit(ProductStateError(e.message ?? "Tidak Dapat Update Produk"));
+      } catch (e) {
+        emit(ProductStateError("Tidak Dapat Update Product"));
+      }
     });
-    on<ProductEventDeleteProduct>((event, emit) {
-      // TODO: implement event handler
+    on<ProductEventDeleteProduct>((event, emit) async {
+      try {
+        emit(ProductStateLoading());
+
+        await firestore
+            .collection("products")
+            .doc(event.id).delete();
+
+        emit(ProductStateCompleteDelete());
+      } on FirebaseException catch (e) {
+        emit(ProductStateError(e.message ?? "Tidak Dapat Menghapus Produk"));
+      } catch (e) {
+        emit(ProductStateError("Tidak Dapat Menghapus Product"));
+      }
     });
   }
 }

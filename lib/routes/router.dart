@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:qrcode_bloc/models/product.dart';
 import 'package:qrcode_bloc/page/add_products.dart';
 import 'package:qrcode_bloc/page/detail_products.dart';
 import 'package:qrcode_bloc/page/error.dart';
@@ -37,7 +38,8 @@ final router = GoRouter(
                   name: Routes.detailProduct,
                   builder: (context, state) => DetailProducts(
                       state.pathParameters['id'].toString(),
-                      state.uri.queryParameters),
+                      state.extra as Product,
+                      ),
                 )
               ]),
               GoRoute(

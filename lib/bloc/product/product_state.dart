@@ -6,8 +6,11 @@ final class ProductStateInitial extends ProductState {}
 
 final class ProductStateLoading extends ProductState {}
 
-final class ProductStateComplete extends ProductState {}
+final class ProductStateCompleteDelete extends ProductState {}
 
+final class ProductStateCompleteEdit extends ProductState {}
+
+final class ProductStateCompleteAdd extends ProductState {}
 final class ProductStateError extends ProductState {
   ProductStateError(this.message);
 
