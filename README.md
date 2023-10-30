@@ -1,4 +1,4 @@
-# qrcode_bloc
+# inventory_flutter
 
 A new Flutter project.
 
